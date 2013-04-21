@@ -32,10 +32,10 @@ function commonAppConfig(){
     require(path.join(__dirname,'/app/libs/helpers'))(app);
     app.set('views', path.join(__dirname,'/app/views'));
     app.set('view engine', 'jade');
-    if(app.config.get('less')){
-        app.use(lessMiddleware(_.extend({src: path.join(__dirname,'/app/src'), dest: path.join(__dirname,'/app/public')},app.config.get('less'))));
-    }
-    app.use(express.favicon(path.join(__dirname,'/app/public/images/icons/favicon.ico')));
+    //if(app.config.get('less')){
+        app.use(lessMiddleware(_.extend({src: path.join(__dirname,'/app/src/'), dest: path.join(__dirname,'/app/public/')},app.config.get('less'))));
+    //}
+    //app.use(express.favicon(path.join(__dirname,'/app/public/images/icons/favicon.ico')));
     app.use(express.bodyParser());
     app.use(app.router);
     app.use(express.static(path.join(__dirname, '/app/public')));

@@ -21,7 +21,6 @@ module.exports = function (app) {
       },
       home:data.home,
       'scripts':[
-        '/javascripts/models/royalslider_widget_init.js'
       ]
     });
   };
