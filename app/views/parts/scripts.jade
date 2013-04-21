@@ -1,0 +1,7 @@
+script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+script(src='/javascripts/libs/bootstrap/bootstrap.min.js')
+script(src='/javascripts/libs/TweenMax.min.js')
+- if(locals.scripts)
+  each script in scripts
+    script(src=script)
+block scripts
